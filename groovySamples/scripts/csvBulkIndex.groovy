@@ -4,6 +4,14 @@
  * User: stevemayzak
  * Date: 10/19/13
  * Time: 6:18 PM
+ *
+ * The purpose of this script is to take an ordinary CSV file and convert it to JSON, then bulk load it into Elasticsearch.
+ * I initially created this as a way to explore Elasticsearch and convert an exported google doc into ES.  It works great so far for
+ * me but its a small file. I haven't tested it with anything major yet so for now, its quite specific to that use case.
+ * I have made some top level properties for easier reuse.
+ *
+ * Note the imports, I'm using the HTTPBuilder to do the Index call.  I will change this to the groovy Elasticsearch
+ * client in the future.
  */
 import groovy.json.JsonBuilder
 import groovyx.net.http.HTTPBuilder
